@@ -14,6 +14,8 @@ spec:
       containers:
       - name: alpine
         image: alpine:3.13.4
+        command: ["/bin/sh"]
+        args: ["-c", "while true; do { /usr/bin/hostname & /usr/bin/date; } > /web/index.html; sleep 60; done"]
         volumeMounts:
         - name: volume-web
           mountPath: /data/web
