@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: DaemonSet
+metadata:
+  name: Producteur
+spec:
+  selector:
+    matchLabels:
+      app3: daemon
+  template:
+    metadata:
+      labels:
+        app3: daemon
+    spec:
+      containers:
+      - name: daemon
+        image: alpine:3.12.4
+        command: ["sleep","3600"]
+        volumeMounts:
+    - name: 
+      mountPath: /data/alpine
+      volumes:
+        - name: data
+        hostPath: /data/db
