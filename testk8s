@@ -5,11 +5,11 @@ metadata:
 spec:
   selector:
     matchLabels:
-      name: daemonset
+      name: daemonset-index
   template:
     metadata:
       labels:
-        name: daemonset
+        name: daemonset-index
     spec:
       containers:
       - name: alpine
