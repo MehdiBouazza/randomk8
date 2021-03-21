@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: producteur
+spec:
+  selector:
+    matchLabels:
+      name: daemonset-index
+  template:
+    metadata:
+      labels:
+        name: daemonset-index
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:3.13.2
+        volumeMounts:
+        - name: app-volume
+          mountPath: /web
+      volumes:
+      - name: app-volume
+        hostPath: 
+          path: /web
+          type: DirectoryOrCreate
