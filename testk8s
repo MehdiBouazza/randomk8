@@ -15,10 +15,10 @@ spec:
       - name: alpine
         image: alpine:3.13.4
         volumeMounts:
-        - name: volume_web
+        - name: volumeWeb
           mountPath: /data/web
       volumes:
-      - name: volume_web
+      - name: volumeWeb
         hostPath: 
           path: /data/web
           type: DirectoryOrCreate
