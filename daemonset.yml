@@ -16,8 +16,8 @@ spec:
         image: alpine:3.12.4
         command: ["sleep","3600"]
         volumeMounts:
-          - name: 
+          - name: alpine
           mountPath: /data/alpine
-        volumes:
-         - name: data
-          hostPath: /data/db
+       volumes:
+        - name: data
+         hostPath: /data/
