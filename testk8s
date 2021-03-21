@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: alpine
-        image: alpine:3.13.2
+        image: alpine:3.13.4
         volumeMounts:
         - name: volume_web
           mountPath: /data/web
